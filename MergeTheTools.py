@@ -1,22 +1,22 @@
 
 
 def merge_the_tools(string, k):
-    subString = []
+    substring = []
     p = 0
     for i in range(int(len(string) / k)):
         item = string[p:p+k]
-        subString.append(item)
+        substring.append(item)
         p+=k
-    nextSub = []
+    nextsub = []
     first = ""
-    for item in subString:
+    for item in substring:
         for sub in item:
-            if sub not in nextSub:
+            if sub not in nextsub:
                 first = first + sub
-                nextSub.append(sub)
+                nextsub.append(sub)
         print(first)
         first = ""
-        nextSub.clear()
+        nextsub.clear()
 
 
 
