@@ -42,4 +42,22 @@ if __name__ == "__main__":
 
     single_string(matrix,n,m)
 
+import re
+
+if __name__ == "__main__":
+    # Input rows and columns
+    n, m = map(int, input().split())
+
+    # Read the matrix as rows
+    matrix = [input() for _ in range(n)]
+
+    # Transpose the matrix to read columns as rows
+    decoded_script = ''.join([''.join(row[i] for row in matrix) for i in range(m)])
+
+    # Replace non-alphanumeric sequences with a single space
+    cleaned_script = re.sub(r'(?<=\w)[^a-zA-Z0-9]+(?=\w)', ' ', decoded_script)
+
+    # Print the cleaned script
+    print(cleaned_script)
+
 

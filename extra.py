@@ -1,4 +1,18 @@
-lst = [4,3,2,1,4,6]
+from math import floor
 
-print(lst[0])
-print(lst[-1])
+sets = set(map(int,input().split()))
+lst = [3,4,5,6,1,7]
+if sets in lst:
+    print(sets)
+else:
+    print("No")
+
+for item in sets:
+    print(int(item))
+
+for value,j in enumerate(lst):
+    print (value,j)
+
+print(int(6/2))
+
+floor()
